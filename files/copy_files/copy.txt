@@ -1,0 +1,3 @@
+Some file text.
+And classified info...
+Beware of the config (always)
