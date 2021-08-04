@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleBackgroundColor Aqua-CadetBlue
+
+title Multi-level inheritance
+
+
+hide Organism methods
+Class Organism {
+alive: bool = True
+}
+
+hide Animal fields
+Class Animal {
+eat():void
+}
+
+hide Dog fields
+Class Dog {
+bark():void
+}
+
+
+Organism <|-- Animal
+Animal <|-- Dog
+
+legend right
+  Can be thought of as : child -> parent -> grandparent
+end legend
+@enduml

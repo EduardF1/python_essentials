@@ -1,0 +1,40 @@
+@startuml
+'https://plantuml.com/class-diagram
+skinparam titleBorderRoundCorner 15
+skinparam titleBorderThickness 2
+skinparam titleBorderColor red
+skinparam titleBackgroundColor Aqua-CadetBlue
+
+title Multiple inheritance
+
+hide Prey fields
+Class Prey {
+  flee():void
+}
+
+hide Predator fields
+Class Predator {
+   hunt():void
+}
+
+hide Rabbit fields
+Class Rabbit {
+run():void
+}
+
+hide Fish fields
+Class Fish {
+swim():void
+}
+
+hide Hawk fields
+Class Hawk {
+fly():void
+}
+
+Prey <|-- Hawk
+Prey <|-- Fish
+Predator <|-- Fish
+Prey <|-- Rabbit
+
+@enduml
